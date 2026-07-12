@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ShohelOS — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== BOOT SCREEN ===================== -->
+  <div id="boot-screen">
+    <div class="boot-inner">
+      <div class="boot-logo">
+        <span class="boot-logo-bracket">&lt;</span><span id="boot-logo-text">ShohelOS</span><span class="boot-logo-bracket">/&gt;</span>
+      </div>
+      <div class="boot-lines" id="boot-lines"></div>
+      <div class="boot-bar-track">
+        <div class="boot-bar-fill" id="boot-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== DESKTOP ===================== -->
+  <div id="desktop">
+    <div id="wallpaper-layer"></div>
+    <div id="wallpaper-scrim"></div>
+
+    <!-- desktop icon grid -->
+    <div id="icon-grid">
+      <button class="desktop-icon" data-window="about">
+        <span class="icon-glyph" data-icon="about"></span>
+        <span class="icon-label">About</span>
+      </button>
+      <button class="desktop-icon" data-window="files">
+        <span class="icon-glyph" data-icon="files"></span>
+        <span class="icon-label">File</span>
+      </button>
+      <button class="desktop-icon" data-window="pictures">
+        <span class="icon-glyph" data-icon="pictures"></span>
+        <span class="icon-label">Picture</span>
+      </button>
+      <button class="desktop-icon" data-window="experience">
+        <span class="icon-glyph" data-icon="experience"></span>
+        <span class="icon-label">Experience</span>
+      </button>
+      <button class="desktop-icon" data-window="projects">
+        <span class="icon-glyph" data-icon="projects"></span>
+        <span class="icon-label">Projects</span>
+      </button>
+      <button class="desktop-icon" data-window="contact">
+        <span class="icon-glyph" data-icon="contact"></span>
+        <span class="icon-label">Contact</span>
+      </button>
+      <button class="desktop-icon" data-window="skills">
+        <span class="icon-glyph" data-icon="skills"></span>
+        <span class="icon-label">Skill</span>
+      </button>
+      <button class="desktop-icon" data-window="education">
+        <span class="icon-glyph" data-icon="education"></span>
+        <span class="icon-label">Education</span>
+      </button>
+    </div>
+
+    <!-- name plate — sits in the open space on the right -->
+    <div id="name-plate">
+      <div id="name-plate-eyebrow">~/whoami</div>
+      <div id="name-plate-name"></div>
+      <div id="name-plate-role"></div>
+      <div id="name-plate-loc"></div>
+    </div>
+
+    <!-- windows mount here -->
+    <div id="window-layer"></div>
+
+    <!-- ===================== EDIT MODE TOOLBAR ===================== -->
+    <div id="edit-toolbar">
+      <span id="edit-toolbar-label">EDIT MODE — লেখায় ক্লিক করে বদলাও, ছবিতে ক্লিক করে আপলোড করো</span>
+      <div id="edit-toolbar-actions">
+        <button class="edit-tool-btn" id="edit-export">Export Backup</button>
+        <button class="edit-tool-btn" id="edit-import">Import Backup</button>
+        <button class="edit-tool-btn danger" id="edit-reset">Reset to Default</button>
+      </div>
+    </div>
+    <input type="file" id="edit-import-input" accept="application/json" hidden>
+    <input type="file" id="edit-photo-input" accept="image/*" hidden>
+
+    <!-- ===================== TASKBAR ===================== -->
+    <div id="taskbar">
+      <button id="start-btn">
+        <span id="start-avatar">S</span>
+        <span id="start-name">ShohelOS</span>
+      </button>
+      <div id="taskbar-running"></div>
+      <button id="edit-toggle-btn" title="Edit Mode">
+        <span class="icon-glyph" data-icon="edit"></span>
+      </button>
+      <div id="taskbar-clock">
+        <span id="clock-time">00:00</span>
+        <span id="clock-date">--- -- ----</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- window content templates -->
+  <template id="tpl-about"></template>
+
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
